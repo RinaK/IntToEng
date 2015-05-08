@@ -24,4 +24,38 @@ public class IntoToEngTest {
 		//fail("Not yet implemented");
 	}
 
+	@Test
+	public void テスト22() {
+		IntToEng ite = new IntToEng();
+		String expected = "twentytwo";
+		String actual = ite.translateEng(22);
+		assertThat(actual, is(expected));
+		//fail("Not yet implemented");
+	}
+	@Test
+	public void テスト33() {
+		IntToEng ite = new IntToEng();
+		String expected = "thirtythree";
+		String actual = ite.translateEng(33);
+		assertThat(actual, is(expected));
+		//fail("Not yet implemented");
+	}
+	@Test
+	public void テスト11() {
+		IntToEng ite = new IntToEng();
+		String expected = "eleven";
+		String actual = ite.translateEng(11);
+		assertThat(actual, is(expected));
+		//fail("Not yet implemented");
+	}
+
+	@Test
+	public void テスト20() {
+		IntToEng ite = new IntToEng();
+		String expected = "twenty";
+		String actual = ite.translateEng(20);
+		assertThat(actual, is(expected));
+		//fail("Not yet implemented");
+	}
+	
 }
