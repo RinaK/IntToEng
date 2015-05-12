@@ -15,68 +15,74 @@ public class IntToEng {
     static String translateEng(int input) {
     	String b="";
     	String[] ENG_LIST= {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen" };
-    	if(input/10==2){
+    	String[] ENG_LIST2={"0","0","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety","hundred"};
+    	if(divide(input)==2){
     		if(remainder(input)==0) {
-    			b="twenty";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    	b="twenty"+ENG_LIST[remainder(input)];
+    	b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     	}
-    	}else if(input/10==3){
+    	}else if(divide(input)==3){
     		if(remainder(input)==0) {
-    			b="thirty";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    		b="thirty"+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}
-    	}else if(input/10==4){
+    	}else if(divide(input)==4){
     		if(remainder(input)==0) {
-    			b="fourty";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    		b="fourty"+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}	
-    	}else if(input/10==5){
+    	}else if(divide(input)==5){
     		if(remainder(input)==0) {
-    			b="fifty";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    		b="fifty"+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}
-    	}else if(input/10==6){
+    	}else if(divide(input)==6){
     		if(remainder(input)==0) {
-    			b="sixty";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    		b="sixty"+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}
-    	}else if(input/10==7){
+    	}else if(divide(input)==7){
     		if(remainder(input)==0) {
-    			b="seventy";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    		b="seventy"+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}
-    	}else if(input/10==8){
+    	}else if(divide(input)==8){
     		if(remainder(input)==0) {
-    			b="eighty";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    			b="eighty"+ENG_LIST[remainder(input)];
+    			b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}
-    	}else if(input/10==9){
+    	}else if(divide(input)==9){
     		if(remainder(input)==0) {
-    			b="ninety";
+    			b=ENG_LIST2[divide(input)];
     		}else{
-    		b="ninety"+ENG_LIST[remainder(input)];
+    		b=ENG_LIST2[divide(input)]+ENG_LIST[remainder(input)];
     		}
-    	}else if(input/10 == 10) {
-    		b="hundred";
+    	}else if(divide(input)== 10) {
+    		b=ENG_LIST2[divide(input)];
     		
     	}else{
-    	
-    	//String[] ENG_LIST= {"zero","one","two","three","four","five","six","seven","eight","nine","ten" };
-    		return ENG_LIST[input];
-    	}
+    		b=ENG_LIST[input];
+    }
     	return b;
 }
+    
     static int remainder(int input){
     	int remain;
     	remain=input%10;
     	return remain;
+    }
+    
+    static int divide(int input){
+    	int divide;
+    	divide=input/10;
+    	return divide;
     }
 }
 
