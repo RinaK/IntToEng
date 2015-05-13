@@ -13,62 +13,66 @@ public class IntToEng {
 
     // 数値を英訳する変換するメソッド
     static String translateEng(int input) {
-    	String a="";
+    	String b="";
     	String[] ENG_LIST= {"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen" };
     	if(input/10==2){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="twenty";
     		}else{
-    	a="twenty"+ENG_LIST[remainder(input)];
+    	b="twenty"+ENG_LIST[remainder(input)];
     	}
     	}else if(input/10==3){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="thirty";
     		}else{
-    		a="thirty"+ENG_LIST[remainder(input)];
+    		b="thirty"+ENG_LIST[remainder(input)];
     		}
     	}else if(input/10==4){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="fourty";
     		}else{
-    		a="fourty"+ENG_LIST[remainder(input)];
+    		b="fourty"+ENG_LIST[remainder(input)];
     		}	
     	}else if(input/10==5){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="fifty";
     		}else{
-    		a="fifty"+ENG_LIST[remainder(input)];
+    		b="fifty"+ENG_LIST[remainder(input)];
     		}
     	}else if(input/10==6){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="sixty";
     		}else{
-    		a="sixty"+ENG_LIST[remainder(input)];
+    		b="sixty"+ENG_LIST[remainder(input)];
     		}
     	}else if(input/10==7){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="seventy";
     		}else{
-    		a="seventy"+ENG_LIST[remainder(input)];
+    		b="seventy"+ENG_LIST[remainder(input)];
     		}
     	}else if(input/10==8){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="eighty";
     		}else{
-    			a="eighty"+ENG_LIST[remainder(input)];
+    			b="eighty"+ENG_LIST[remainder(input)];
     		}
     	}else if(input/10==9){
     		if(remainder(input)==0) {
-    			a="twenty";
+    			b="ninety";
     		}else{
-    		a="ninety"+ENG_LIST[remainder(input)];
+    		b="ninety"+ENG_LIST[remainder(input)];
     		}
+    	}else if(input/10 == 10) {
+    		b="hundred";
+    		
     	}else{
+    	
     	//String[] ENG_LIST= {"zero","one","two","three","four","five","six","seven","eight","nine","ten" };
     		return ENG_LIST[input];
     	}
-    	return a;
-    }
+    	return b;
+}
     static int remainder(int input){
     	int remain;
     	remain=input%10;
