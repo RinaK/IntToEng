@@ -79,8 +79,8 @@ public class IntToEng {
     	return remain;
     }
     
-    static int divide(int i){
-    	return division(i);
+    static int divide(int input){
+    	return division(input);
     }
 
 	static int division(int input) {
