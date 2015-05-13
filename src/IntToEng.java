@@ -79,10 +79,14 @@ public class IntToEng {
     	return remain;
     }
     
-    static int divide(int input){
-    	int divide;
+    static int divide(int i){
+    	return division(i);
+    }
+
+	static int division(int input) {
+		int divide;
     	divide=input/10;
     	return divide;
-    }
+	}
 }
 
